@@ -63,10 +63,24 @@ describe('Visual monitor testing', function() {
       .url(baseUrl)
       .webdrivercss(testName + '.homepage', {
         name: '1',
-        exclude: [],
+        exclude:
+          [
+            // Post
+            '.post-image',
+          ],
         remove: [],
-        hide: [],
-        screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
+        hide:
+          [
+            // Top story title.
+            '.top-story-title',
+            // Top story author name.
+            '.top-story-author-name',
+            // Post
+            '.title',
+            '.post-channel',
+            '.shares'
+          ],
+        screenWidth: selectedCaps == 'chrome' ? [1200] : undefined,
       }, resultsCallback)
       .call(done);
   });
