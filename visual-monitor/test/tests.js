@@ -68,7 +68,6 @@ describe('Visual monitor testing', function() {
             // Post
             '.post-image',
           ],
-        remove: [],
         hide:
           [
             // Top story title.
